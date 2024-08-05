@@ -32,4 +32,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Build with Grad
+      - name: Build with Gradle
+        run: ./gradlew build
+        env:
+          CI: true
